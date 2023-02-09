@@ -16,7 +16,11 @@ class CarController {
   late CarEntity car;
 
   getCarsByColor(String color) {
-    car = _getCarsByColorUseCase(color);
+    var result = _getCarsByColorUseCase(color);
+    result.fold(
+      (error) => print(error.toString()),
+      (sucess) => car = sucess,
+    );
   }
 
   saveFavoriteCar(CarEntity car) async {

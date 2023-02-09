@@ -1,5 +1,6 @@
+import 'package:dartz/dartz.dart';
 import '../entities/car_entity.dart';
 
 abstract class GetCarsByColorRepository {
-  CarEntity call(String color);
+  Either<Exception, CarEntity> call(String color);
 }

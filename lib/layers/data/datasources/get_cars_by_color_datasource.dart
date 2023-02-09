@@ -1,5 +1,6 @@
-import 'package:clean/layers/data/dto/car_dto.dart';
+import 'package:clean/layers/data/dtos/car_dto.dart';
+import 'package:dartz/dartz.dart';
 
 abstract class GetCarsByColorDataSource {
-  CarDto call(String color);
+  Either<Exception, CarDto> call(String color);
 }

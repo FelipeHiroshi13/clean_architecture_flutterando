@@ -1,8 +1,10 @@
+import 'package:clean/core/inject/inject.dart';
 import 'package:flutter/material.dart';
 
 import 'layers/presentation/ui/pages/car_page.dart';
 
 void main() {
+  Inject.init();
   runApp(const MyApp());
 }
 
